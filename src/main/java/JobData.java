@@ -95,15 +95,15 @@ public class JobData {
 
         for (HashMap<String, String> job: allJobs) {
             for (Map.Entry<String, String> category : job.entrySet()){
-                String aValue = category.getValue();
-                if (aValue.contains(value)){
+                String aValue = category.getValue().toLowerCase();
+                if (aValue.toLowerCase().contains(value.toLowerCase())){
                     jobs.add(job);
+                    break;
                 }
             }
         }
         return jobs;
-        // TODO - implement this method
-//        return null;
+
     }
 
     /**
