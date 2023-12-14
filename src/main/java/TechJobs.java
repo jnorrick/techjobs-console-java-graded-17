@@ -116,31 +116,14 @@ public class TechJobs {
 
         return choiceKeys[choiceIdx];
     }
-
-    // Print a list of jobs
-//    *****
-//    position type: Data Scientist / Business Intelligence
-//    name: Sr. IT Analyst (Data/BI)
-//    employer: Bull Moose Industries
-//    location: Saint Louis
-//    core competency: Statistical Analysis
-//    *****
-//
-//    *****
-//    position type: Web - Back End
-//    name: Ruby specialist
-//    employer: LaunchCode
-//    location: Saint Louis
-//    core competency: Javascript
-//    *****
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
-        if (someJobs.size()>0) {
+        if (someJobs.size() > 0) {
             for (HashMap<String, String> job : someJobs) {
-                System.out.println("*****");
+                System.out.println("\n*****");
                 for (Map.Entry<String, String> category : job.entrySet()) {
                     System.out.println(category.getKey() + ": " + category.getValue());
                 }
-                System.out.println("*****\n");
+                System.out.println("*****");
             }
         } else {
             System.out.print("No Results");
