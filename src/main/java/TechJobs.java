@@ -117,7 +117,7 @@ public class TechJobs {
         return choiceKeys[choiceIdx];
     }
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
-        if (someJobs.size() > 0) {
+        if (!someJobs.isEmpty()) {
             for (HashMap<String, String> job : someJobs) {
                 System.out.println("\n*****");
                 for (Map.Entry<String, String> category : job.entrySet()) {

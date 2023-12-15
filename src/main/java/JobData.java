@@ -93,11 +93,11 @@ public class JobData {
 
         ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
 
-        for (HashMap<String, String> job: allJobs) {
-            for (Map.Entry<String, String> category : job.entrySet()){
-                String aValue = category.getValue().toLowerCase();
-                if (aValue.toLowerCase().contains(value.toLowerCase())){
-                    jobs.add(job);
+        for (HashMap<String, String> row : allJobs) {
+            for (Map.Entry<String, String> item : row.entrySet()){
+                String aValue = item.getValue().toLowerCase();
+                if (aValue.contains(value.toLowerCase())){
+                    jobs.add(row);
                     break;
                 }
             }
