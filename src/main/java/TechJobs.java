@@ -117,16 +117,16 @@ public class TechJobs {
         return choiceKeys[choiceIdx];
     }
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
-        if (!someJobs.isEmpty()) {
+        if (someJobs.size() == 0) {
+            System.out.print("No Results");
+        } else {
             for (HashMap<String, String> job : someJobs) {
                 System.out.println("\n*****");
-                for (Map.Entry<String, String> category : job.entrySet()) {
-                    System.out.println(category.getKey() + ": " + category.getValue());
+                for (Map.Entry<String, String> column : job.entrySet()) {
+                    System.out.println(column.getKey() + ": " + column.getValue());
                 }
                 System.out.println("*****");
             }
-        } else {
-            System.out.print("No Results");
         }
     }
 }
